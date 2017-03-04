@@ -1,0 +1,531 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: "breve";
+    src: url("../fonts/BREVE2.ttf") format("truetype");
+}
+
+body{
+    
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    overflow-x:hidden;
+    
+}
+#header{
+    height:100vh;
+    width: 100%;
+    position: relative;
+    
+    background-image: url(../img/1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0;
+    padding:0;
+    z-index: 0;
+}
+
+.layer{
+    position: absolute;
+    top:0;
+    height:100vh;
+    width:100%;
+    background-color: rgba(40,40,40,0.3);
+    z-index: 1;
+   
+}
+
+.layer h1{
+    position:relative;
+    top:30%;
+    right:50%;
+    transform: translate(50%);
+    display:block;
+    text-align: center;
+    font-family: "breve";
+    letter-spacing: 15px;
+    font-size: 7em;
+    font-weight: 400;
+    color:rgba(240, 240, 240, 1);
+    
+}
+.layer p{
+    position:relative;
+    top:28%;
+    display: block;
+    margin:0 auto;
+    letter-spacing: 23px;
+    max-width:600px;
+    color:rgba(240,240,240,1);
+    font-weight: 300;
+    text-align: center;
+}
+
+.logo{
+    
+    position: fixed;
+    top:20px;
+    left:20px;
+    max-width:200px;
+    height:auto;
+    z-index: 9;
+    
+    
+}
+
+.layer a{
+    position: relative;
+    
+    left:50%;
+    transform: translate(-50%,500%);
+    display: inline-block;
+    text-decoration: none;
+    
+}
+
+.layer .portfolioBtn{
+    position:relative;
+    display: block;
+    top:50px;
+    margin:0 auto;
+    
+    width:250px;
+    height:50px;
+    background: rgba(0,0,0,0);
+    color:rgba(240,240,240,1);
+    font-size:1.5em;
+    border:1px solid rgba(240,240,240,1);
+    
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    transition: background 0.25s ease;
+    
+}
+
+.layer .portfolioBtn:hover{
+    background: rgba(0,0,0,0.5);
+    
+}
+
+
+.menuBtn{
+    
+    
+    
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:50px;
+    height:40px;
+    display:block;
+    z-index: 100;
+}
+
+.icon-line{
+    position:relative;
+    background-color:rgba(240,240,240,1);
+    display: block;
+    border-radius:12px;
+    width:30px;
+    height:4px;
+    opacity:1;
+    top:0;
+    left:10px;
+    margin-top:7px;
+    transition: 0.25s;
+}
+
+.open span:nth-child(1){
+    transform: rotate(45deg);
+    top:11px;
+    
+}
+.open span:nth-child(2){
+    left:-30px;
+    opacity:0;
+    
+}
+.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top:-11px;
+}
+
+
+.menu{
+    height:100vh;
+    width:100%;
+    background-color:rgba(0, 0, 0, 0.8);
+    position:fixed;
+    display:table;
+    opacity: 0;
+    bottom:100%;
+    z-index: 99;
+    color:white;
+    text-align: center;
+    transition:0.8s ease;
+}
+
+.showMenu{
+    opacity:1;
+    bottom:0;
+    
+    
+}
+.menuItems{
+    
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    
+    
+}
+.menuItems h1{
+    margin-top:50px;
+    
+}
+
+
+
+
+.menuItems a{
+    text-decoration: none;
+    color:rgba(240,240,240,1);
+}
+
+.menuItems .logo{
+    height: auto;
+    max-width:20%;
+    margin-top:50px;
+}
+
+.menu .menuLinks{
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+}
+
+.menu .menuLinks a{
+    margin:0px 20px;
+    transition: 0.25s;
+}
+
+.menu a:hover{
+    color:#E9168C;
+}
+
+#main{
+    
+    background-color:rgba(0,0,0,1);
+    padding-bottom:500px;
+}
+
+#main h1{
+    
+    text-align: center;
+    font-size: 3em;
+    color:rgba(240,240,240,1);
+    padding: 100px 0;
+    font-family: "breve";
+}
+
+#main .flex-images .item{
+    margin:0;
+    padding:0;
+    border:none;
+    z-index:10;
+}
+#main .imgLayer{
+    position:absolute;
+    height:100%;
+    width:100%;
+    
+    background-color:rgba(0, 0, 0, 0.3);
+    top:0;
+    left:0;
+    opacity: 0;
+    transition: 0.25s;
+    
+}
+
+#main .imgLayer:hover{
+    opacity:1;
+}
+
+#main .imgLayer .innerBorder{
+    position: absolute;
+    display: table;
+    top:50%;
+    left:30%; 
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color:rgba(240,240,240,1);
+    margin:0px auto;
+    height:70%;
+    width:70%;
+    opacity:0;
+    border:1px solid rgba(240,240,240,1);
+    transition: 0.5s;
+}
+
+.slideRight{
+    left:50% !important;
+    opacity:1 !important;
+}
+
+#main .imgLayer h2{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*
+#main .borderLine{
+    width:100%;
+    height:1px;
+    background-color: rgba(240,240,240,1);
+    position:absolute;
+    top:0;
+    transition: 0.25s;
+}
+
+ #main .borderLine:nth-child(1){
+    transform: rotate(90deg);
+    margin:145px 0px 0px 150px;
+    
+}
+
+#main .borderLine:nth-child(2){
+    transform: rotate(-90deg);
+    margin:145px 0px 0px -150px;
+    
+}
+
+#main .borderLine:nth-child(3){
+    top:auto;
+    bottom:0;
+}
+*/
+
+#main .videoModal{
+    
+    height:100vh;
+    width: 100%;
+    background-color:rgba(40,40,40,0.8);
+    position: fixed;
+    top:0;
+    right:100%;
+    z-index: 10;
+    opacity:0;
+    transition: 0.5s ease;
+    
+}
+
+.openModal{
+    opacity: 1 !important;
+    right:0 !important;
+}
+
+.closeVideo{
+    position:absolute;
+    top:0;
+    left:0;
+    color:rgba(240,240,240,1);
+    margin:10px;
+    font-size: 3em !important;
+    z-index: 50;
+    
+    
+}
+
+
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+} 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 50%; 
+    height: 50%; 
+    transform: translate(-50%, -50%);
+}
+#footer{
+    background-color:black;
+    position:relative;
+    width: 100%;
+}
+
+#footer h1{
+    position: absolute;
+    color:white;
+    left:50%;
+    transform: translate(50%);
+    top:-500px;
+}
+#footer .footerPhoto{
+    
+    position:absolute;
+    bottom:-500px;
+    left:50%;
+    transform: translate(-50%);
+    background-image: url("../img/huri3.jpg");
+    background-position:center;
+    background-size: cover;
+    width:500px;
+    height:500px;
+    
+    border-radius:50%;
+    z-index: 0;
+    opacity:0;
+    transition: 0.7s;
+}
+
+.slidePhoto{
+    bottom:-250px !important;
+    opacity:1 !important;
+}
+
+#footer .footerInfo{
+    position: absolute;
+    
+    height:500px;
+    width:100%;
+    background-color:rgba(40,40,40,1);
+    z-index: 1;
+    transition: 0.7s;
+    
+}
+
+.shrinkFooter{
+    height: 250px !important;
+}
+
+
+#footer .contactInfo{
+    position:absolute;
+    color:white;
+    top:-400px;
+    right:50%;
+    transform: translate(50%);
+    
+}
+
+#footer .contactInfo h2{
+    color:rgba(240,240,240,1);
+    text-align: center;
+    font-size: 3em;
+    margin-bottom:30px;
+    font-family: "breve";
+}
+
+#footer .contactInfo p{
+    font-size:0.7em;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+/*
+
+#footer .contactIcons,#footer .contactInfo{
+    text-align: center;
+    margin-top:20px;
+}
+
+#footer .contactIcons i{
+    margin: 0 80px;
+    color:rgba(240,240,240,1);
+    font-size: 1.2em;
+}
+
+#footer .contactInfo p{
+    display: inline;
+    margin: 0 20px 0 40px;
+    color:rgba(240,240,240,1);
+    font-size:0.8em;
+}
+
+*/
+
+#footer .credit{
+    position: absolute;
+    text-align: center;
+    color:rgba(240,240,240,1);
+    font-size:0.6em;
+    letter-spacing: 5px;
+    width:100%;
+    bottom:30px;
+    
+}
+#footer .advert{
+    position: absolute;
+    text-align: center;
+    color:rgba(240,240,240,1);
+    font-size:0.6em;
+    width:100%;
+    letter-spacing: 5px;
+    bottom:10px;
+    
+    
+}
+
+#footer .menuLinks{
+    
+    position: absolute;
+    bottom:30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    
+}
+
+#footer .menuLinks a{
+    color:rgba(240,240,240,1);
+    margin-right:20px;
+    transition: 0.25s;
+}
+
+#footer .menuLinks a:hover{
+    color: #E9168C;
+}
+
+#footer .advert a{
+    text-decoration: none;
+    color:#E9168C;
+}
+@media only screen and (max-width : 550px) {
+    
+    .layer h1{
+        font-size: 3em;
+    }
+    .layer p{
+        margin:0 20px;
+    }
+    .layer .portfolioBtn{
+        margin-top:20px;
+    }
+    
+    .layer .logo{
+        width: 100px;
+    }
+    #footer .contactIcons i{
+    margin: 0 55px;
+    
+    }
+    #footer .contactInfo p{
+    display: inline;
+    margin: 0 10px 0 10px;
+    color:rgba(240,240,240,1);
+    font-size:0.8em;
+}
+}
